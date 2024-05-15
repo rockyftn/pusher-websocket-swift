@@ -28,6 +28,9 @@ extension PusherConnection: WebSocketConnectionDelegate {
                 return
             }
             self.handleError(error: error)
+        } else if event == Constants.Events.Pusher.pong {
+            Logger.shared.debug(for: .pongReceived)
+            resetActivityTimeoutTimer()
         } else {
             self.eventQueue.enqueue(json: payload)
         }

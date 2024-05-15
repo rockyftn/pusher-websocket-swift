@@ -410,7 +410,10 @@ import NWWebSocket
         Send a ping to the server
     */
     @objc private func sendPing() {
-        socket.ping()
+        self.sendEvent(
+            event: Constants.Events.Pusher.ping,
+            data: []
+        )
         Logger.shared.debug(for: .pingSent)
         self.setupPongResponseTimeoutTimer()
     }

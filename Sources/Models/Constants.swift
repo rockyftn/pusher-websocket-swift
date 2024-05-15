@@ -20,6 +20,8 @@ enum Constants {
             static let connectionEstablished    = "pusher:connection_established"
             static let error                    = "pusher:error"
             static let subscribe                = "pusher:subscribe"
+            static let ping                     = "pusher:ping"
+            static let pong                     = "pusher:pong"
             static let unsubscribe              = "pusher:unsubscribe"
             static let subscriptionError        = "pusher:subscription_error"
             static let subscriptionSucceeded    = "pusher:subscription_succeeded"
